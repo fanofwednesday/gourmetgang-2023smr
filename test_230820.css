@@ -28,6 +28,11 @@ summary::-webkit-details-marker {
     display:none;
 }
 
+a {
+    color: #1b7bb4;
+    text-decoration: none;
+}
+
 /* reset */
 
 
@@ -95,7 +100,10 @@ h1 {
     background: #F9D7E7;
     border-radius: 40px;
     width: 100%;
-    padding-top: 40px;
+    padding: 40px 0 60px;
+}
+.c-sec + .c-sec {
+    margin-top: 50px;
 }
 
 .c-sec h2 {
@@ -120,7 +128,7 @@ h1 {
     content: '';
     display: block;
     position: absolute;
-    height: 100%;
+    height: calc(100% - 80px);
     width: 2px;
     background: #4BA8DF;
     top: 37px;
@@ -130,6 +138,7 @@ h1 {
 .c-event_wrap {
     margin-bottom: 10px;
     position: relative;
+    transition: .2s ease-out;
 }
 
 .c-event_wrap::before {
@@ -151,7 +160,7 @@ h1 {
     border-radius: 12px;
     padding: 15px;
     position: relative;
-    /* transition: .2s ease-out; */
+    transition: .2s ease-out;
 }
 
 .c-event_time {
@@ -178,7 +187,7 @@ h1 {
     border-right: solid 2px #5070e3;
     position: absolute;
     right: 15px;
-    top: calc(50% - 5px);
+    top: calc(50% - 7px);
     transform: rotate(135deg);
     transition: .2s ease-out;
 }
