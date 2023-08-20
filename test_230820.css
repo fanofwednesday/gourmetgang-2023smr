@@ -33,6 +33,8 @@ h1 {
 .toc_wrap {
     display: flex;
     gap: 12px;
+    margin: auto 30px;
+    padding: 0;
 }
 
 .toc_btn {
