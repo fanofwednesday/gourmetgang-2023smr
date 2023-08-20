@@ -107,11 +107,27 @@ h1 {
     position: relative;
 }
 
+.c-tl::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: #4BA8DF;
+    top: 37px;
+    left: -24px;
+}
+
+.c-event_wrap {
+    margin-bottom: 10px;
+    position: relative;
+}
+
 .c-event_wrap::before {
     content: '';
     display: block;
     position: absolute;
-    background: red;
+    background: #4BA8DF;
     height: 14px;
     width: 14px;
     border-radius: 7px;
@@ -125,6 +141,7 @@ h1 {
     background: #fff;
     border-radius: 12px;
     padding: 15px;
+    position: relative;
     /* transition: .2s ease-out; */
 }
 
@@ -137,6 +154,29 @@ h1 {
     font-size: 20px;
     font-weight: bold;
     display: block;
+}
+
+.c-event_toggle {
+    /* position: absolute; */
+    /* right: 10px; */
+}
+
+.c-event_toggle::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px #5070e3;
+    border-right: solid 2px #5070e3;
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 5px);
+    transform: rotate(135deg);
+    transition: .2s ease-out;
+}
+
+details[open] .c-event_toggle::before {
+    transform: rotate(-45deg);
+    transition: .2s ease-out;
 }
 
 .c-event_detail {
