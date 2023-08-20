@@ -15,8 +15,17 @@ button:focus, a:focus, input:focus, details:focus, summary:focus {
     box-shadow: none;
 }
 
-li, summary {
+li {
     list-style: none;
+}
+
+summary {
+    display: block;
+    list-style: none;
+}
+  
+summary::-webkit-details-marker {
+    display:none;
 }
 
 /* reset */
