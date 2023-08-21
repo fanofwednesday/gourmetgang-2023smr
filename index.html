@@ -7,8 +7,9 @@
     <link rel="stylesheet" type="text/css" href="test_230820.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;400;700&family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 <body class="l-body">
     <header>
@@ -26,7 +27,7 @@
     </header>
     <main class="l-main">
         <div class="kv">
-            <h1>HOKKAIDO<span class="h1_middle">Gourmet Gang</span><span class="h1_bottom">Tour</span></h1>
+            <h1><img src="logo.png" width="310" height="100" alt="北海道グルメギャング旅"></h1>
             <p>Aug, 2023</p>
         </div>
         <div class="toc s-toc">
@@ -81,7 +82,7 @@
                     <li class="c-event_wrap">
                         <details class="c-event">
                             <summary class="c-event_ttl">
-                                <span class="c-event_time">14:00</span>
+                                <span class="c-event_time">14:00 - 17:00</span>
                                 <span class="c-event_txt">札幌観光</span>
                                 <span class="c-event_toggle"></span>
                             </summary>
@@ -90,6 +91,44 @@
                                     <li>ボーイズビーアンビシャス</li>
                                     <li>平岸高台公園（水曜どうでしょうのやつ）</li>                                
                                 </ul>
+                        </details>
+                    </li>
+                    <li class="c-event_wrap">
+                        <details class="c-event">
+                            <summary class="c-event_ttl">
+                                <span class="c-event_time">17:00</span>
+                                <span class="c-event_txt">トマムへ向けて出発</span>
+                            </summary>
+                        </details>
+                    </li>
+                    <li class="c-event_wrap">
+                        <details class="c-event">
+                            <summary class="c-event_ttl">
+                                <span class="c-event_time">19:00 - 20:30</span>
+                                <span class="c-event_txt">星野リゾート ビュッフェ</span>
+                                <span class="c-event_toggle"></span>
+                            </summary>
+                            <div class="c-event_detail"><a href="https://tabelog.com/hokkaido/A0107/A010701/1049433/" target="_blank">グルメ回転寿司 函太郎 新千歳空港店</a><br>
+                            ※予約文化がない</div>
+                        </details>
+                    </li>
+                    <li class="c-event_wrap">
+                        <details class="c-event">
+                            <summary class="c-event_ttl">
+                                <span class="c-event_time">21:00</span>
+                                <span class="c-event_txt">宿 チェックイン</span>
+                                <span class="c-event_toggle"></span>
+                            </summary>
+                            <div class="c-event_detail"><a href="https://tabelog.com/hokkaido/A0107/A010701/1049433/" target="_blank">グルメ回転寿司 函太郎 新千歳空港店</a><br>
+                            ※予約文化がない</div>
+                        </details>
+                    </li>
+                    <li class="c-event_wrap">
+                        <details class="c-event">
+                            <summary class="c-event_ttl">
+                                <!-- <span class="c-event_time">17:00</span> -->
+                                <span class="c-event_txt">おやすみ</span>
+                            </summary>
                         </details>
                     </li>
                 </ul>
@@ -143,6 +182,7 @@
 
         var $menu = $('.s-toc'),
             menuTopPos = $menu.offset().top;
+            
 
         $(window).on('scroll', function(){
             var menuHight = $menu.innerHeight(),
