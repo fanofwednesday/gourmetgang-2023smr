@@ -222,14 +222,15 @@ h1 {
 
 .toc_wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 7px;
     padding: 0 2%;
     margin: 0;
 }
 
 .toc_btn {
     color: #333;
-    width: 24%;
+    width: 20%;
     padding: 10px 0 7px;
     font-weight: bold;
     font-size: 20px;
@@ -243,6 +244,8 @@ h1 {
     font-size: 18px;
     /* line-height: 16px; */
 }
+
+
 
 .toc_btn a {
     color: #767676;
@@ -279,7 +282,8 @@ h1 {
 }
 
 .c-sec {
-    background: #EAF18C;
+    /* background: #EAF18C; */
+    background: #c0fcda;
     /* background: linear-gradient(-45deg, rgba(53,152,182,1) 0%, rgba(152,219,146,1) 35%, rgba(20,244,183,1) 100%); */
     /* background: linear-gradient(150deg, #6fc3f7 20%, #1813a2 90%); */
     /* background: linear-gradient(150deg, #F9D7E7 20%, #F8ABA6 90%); */
