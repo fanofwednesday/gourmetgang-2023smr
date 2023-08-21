@@ -159,23 +159,45 @@ a {
     color: #333;
 }
 
-h1 {
-    /* color: green; */
-}
-
 .l-main {
     /* background: #f7f7f7; */
     /* font-weight: bold; */
 }
 
 .kv {
-    margin: auto 30px;
+    margin: 100px 30px 0;
+}
+
+h1 {
+    font-family: 'Geologica', sans-serif;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 58px;
+    margin-bottom: 50px;
+}
+
+.h1_middle {
+    display: block;
+    font-weight: normal;
+    line-height: 50px;
+    font-size: 45px;
+    color: yellow;
+    padding-top: 5px;
+}
+
+.h1_bottom {
+    display: block;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    padding-top: 8px;
 }
 
 .kv p{
     font-weight: bold;
     color: #333;
     font-size: 32px;
+    margin-bottom: 20px;
 }
 
 .toc {
@@ -353,7 +375,7 @@ h1 {
     border-top: solid 2px #5070e3;
     border-right: solid 2px #5070e3;
     position: absolute;
-    right: 15px;
+    right: 5px;
     top: calc(50% - 7px);
     transform: rotate(135deg);
     transition: .2s ease-out;
