@@ -1,5 +1,114 @@
 /* reset */
 
+
+body {
+  color: #333;
+}
+
+a {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+:placeholder-shown {
+  color: #ccc;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: #f7f7f7;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin: 0;
+  /* background-color: #f7f7f7; */
+  color: #333;
+  font-family: 'Roboto', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  overflow-y: scroll;
+}
+pre, textarea {
+  overflow: auto;
+}
+
+[hidden], audio:not([controls]), template {
+  display: none;
+}
+
+details, main, summary {
+  display: block;
+}
+
+input[type=number] {
+  width: auto;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+progress {
+  display: inline-block;
+}
+
+small {
+  font-size: 75%;
+}
+
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  resize: vertical;
+}
+
+[unselectable] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+::after, ::before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+:root {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  cursor: default;
+}
+
 button {
     padding: 0;
     border: none;
@@ -51,7 +160,7 @@ a {
 }
 
 h1 {
-    color: green;
+    /* color: green; */
 }
 
 .l-main {
@@ -69,41 +178,94 @@ h1 {
     font-size: 32px;
 }
 
+.toc {
+    padding: 5px 0 0;
+}
+
+.toc.is-on {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: #8CBCDF;
+}
+
+.toc.is-on::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #F9D7E7;
+}
+
 .toc_wrap {
     display: flex;
-    gap: 12px;
-    margin: 0 30px 40px;
-    padding: 0;
+    justify-content: space-between;
+    padding: 0 2%;
+    margin: 0;
 }
 
 .toc_btn {
-    background: #fff;
-    border-radius: 50px;
-    padding: 22px 17px;
+    background: #e7e7e7;
+    width: 24%;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 0 7px;
+    text-align: center;
+}
+
+.toc_btn {
+    /* background: #fff; */
+    /* border-radius: 50px; */
+    /* padding: 22px 17px; */
     font-weight: bold;
     font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+}
+.toc_btn:last-child {
+    font-weight: normal;
+    font-size: 18px;
+    /* line-height: 16px; */
+}
+
+.toc_btn button {
     text-align: center;
 }
 
 .toc_btn:active {
-    background: #5296C8;
+    background: #F9D7E7;
     transition: .1s ease-out;
 }
 
 .toc_week {
     font-weight: normal;
-    font-size: 17px;
-    display: block;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.schedule {
+    /* background: linear-gradient(150deg, #F9D7E7 20%, #F8ABA6 90%); */
 }
 
 .c-sec {
     background: #F9D7E7;
-    border-radius: 40px;
+    /* background: linear-gradient(-45deg, rgba(53,152,182,1) 0%, rgba(152,219,146,1) 35%, rgba(20,244,183,1) 100%); */
+    /* background: linear-gradient(150deg, #6fc3f7 20%, #1813a2 90%); */
+    /* background: linear-gradient(150deg, #F9D7E7 20%, #F8ABA6 90%); */
+    /* border-radius: 40px; */
     width: 100%;
-    padding: 40px 0 60px;
+    padding: 40px 0 150px;
+    /* margin: 10px; */
+    /* box-shadow: ; */
 }
+
+.c-sec:last-child {
+    padding-bottom: 50px;
+}
+
 .c-sec + .c-sec {
-    margin-top: 50px;
+    margin-top: -80px;
 }
 
 .c-sec h2 {
@@ -163,13 +325,18 @@ h1 {
     transition: .2s ease-out;
 }
 
+.c-event_ttl {
+    display: block;
+    position: relative;
+}
+
 .c-event_time {
     font-size: 14px;
-    color: #555;
+    color: #767676;
 }
 
 .c-event_txt {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     display: block;
 }
