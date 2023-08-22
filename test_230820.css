@@ -160,14 +160,19 @@ a {
 }
 
 .l-main {
-    /* background: #f7f7f7; */
-    /* font-weight: bold; */
+    background: #FBF8F3;
 }
 
 .kv {
-    padding: 100px 20px 70px;
+    padding: 140px 20px 70px;
     background: #FBF8F3;
     position: relative;
+}
+
+.sushi {
+    position: absolute;
+    top: 38px;
+    right: 30px;
 }
 
 h1 {
@@ -180,14 +185,14 @@ h1 {
 
 .kv p{
     font-weight: bold;
-    color: #333;
+    color: #E56F8B;
     font-size: 32px;
     padding-bottom: 40px;
     font-family: 'Nanum Gothic', sans-serif;
 }
 
 .toc {
-    width: calc(100% - 40px);
+    width: calc(100% - 50px);
     padding: 5px 0;
     background: #fff;
     border-radius: 30px;
@@ -195,6 +200,10 @@ h1 {
     bottom: 20px;
     font-family: 'Nanum Gothic', sans-serif;
     box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
 }
 
 .toc.is-on {
@@ -209,7 +218,7 @@ h1 {
 .toc_wrap {
     display: flex;
     justify-content: center;
-    gap: 7px;
+    gap: 12px;
     padding: 0 2%;
     margin: 0;
 }
@@ -223,12 +232,6 @@ h1 {
     line-height: 22px;
     text-align: center;
     position: relative;
-}
-
-.toc_btn:last-child {
-    font-weight: normal;
-    font-size: 18px;
-    /* line-height: 16px; */
 }
 
 .toc_btn a {
@@ -275,19 +278,15 @@ h1 {
 }
 
 .c-sec:nth-child(n) {
-    background: #5BCFC7;
+    background: #5CD6CD;
 }
 
 .c-sec:nth-child(2n) {
-    background: #A2E072;
+    background: #A4E076;
 }
 
 .c-sec:nth-child(3n) {
-    background: #FCED62;
-}
-
-.c-sec:last-child {
-    padding-bottom: 50px;
+    background: #F6E968;
 }
 
 .c-sec + .c-sec {
@@ -296,7 +295,7 @@ h1 {
 
 .c-sec_paper {
     position: absolute;
-    opacity: .3;
+    opacity: .2;
     border-radius: 90px 0 90px 0;
     top: 0;
     width: 100%;
@@ -436,4 +435,17 @@ details[open] .c-event_toggle::before {
     border-radius: 5px;
     top: 7px;
     left: 0;
+}
+
+.c-img_wrap {
+    margin: 20px;
+    text-align: center;
+}
+
+.footer {
+    background: #FBF8F3;
+    color: #707070;
+    font-size: 11px;
+    text-align: center;
+    margin: 30px auto 20px;
 }
