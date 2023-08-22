@@ -41,13 +41,14 @@
         </div>
         <div class="schedule">
             <section class="c-sec" id="25fri">
+                <span class="c-sec_paper"></span>
                 <h2>8.25<span class="c-sec_week">fri</span></h2>
                 <ul class="c-tl">
                     <li class="c-event_wrap">
                         <div class="c-event">
                             <div class="c-event_ttl">
                                 <span class="c-event_time">11:00 - 11:05</span>
-                                <span class="c-event_txt">新千歳空港着</span>
+                                <span class="c-event_txt">新千歳空港 着</span>
                             </div>
                         </d>
                     </li>
@@ -132,6 +133,7 @@
             </section>
 
             <section class="c-sec" id="26sat">
+                <span class="c-sec_paper"></span>
                 <h2>8.26<span class="c-sec_week">sat</span></h2>
                 <ul class="c-tl">
                     <li class="c-event_wrap">
@@ -256,6 +258,7 @@
             </section>
 
             <section class="c-sec c-sec_27" id="27sun">
+                <span class="c-sec_paper"></span>
                 <h2>8.27<span class="c-sec_week">sun</span></h2>
                 <ul class="c-tl">
                     <li class="c-event_wrap thin">
@@ -432,7 +435,15 @@
             $('.toc-25, .toc-26, .toc-27').removeClass('is-on');
         })
 
-        
+        $('.toc a[href^="#"]').click(function(){
+            var adjust = 1;
+            var speed = 300; // ミリ秒
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top + adjust;
+            $('body,html').animate({scrollTop:position}, speed, 'swing');
+            return false;
+        });
 
     });
 </script>
