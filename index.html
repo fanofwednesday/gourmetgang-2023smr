@@ -28,14 +28,14 @@
     </header>
     <main class="l-main">
         <div class="kv">
-            <h1><img src="logo.png" width="310" height="100" alt="北海道グルメギャング旅"></h1>
+            <img src="sushi.png" class="sushi" width="136" height="108" alt="">
+            <h1><img src="logo.png" width="286" height="92" alt="北海道グルメギャング旅"></h1>
             <p>Aug, 2023</p>
             <div class="toc s-toc">
                 <ul class="toc_wrap">
                     <li class="toc_btn toc-25"><a href="#25fri">25<span class="toc_week">fri</span></a></li>
                     <li class="toc_btn toc-26"><a href="#26sat">26<span class="toc_week">sat</span></a></li>
                     <li class="toc_btn toc-27"><a href="#27sun">27<span class="toc_week">sun</span></a></li>
-                    <li class="toc_btn toc-links"><a href="#links">links</a></li>
                 </ul>
             </div>
         </div>
@@ -131,6 +131,11 @@
                     </li>
                 </ul>
             </section>
+            
+            <div class="c-img_wrap">
+                <img src="tree.png" class="tree" width="110" height="36" alt="">
+            </div>
+
 
             <section class="c-sec" id="26sat">
                 <span class="c-sec_paper"></span>
@@ -257,6 +262,10 @@
                 </ul>
             </section>
 
+            <div class="c-img_wrap">
+                <img src="ice.png" class="ice" width="102" height="40" alt="">
+            </div>
+
             <section class="c-sec c-sec_27" id="27sun">
                 <span class="c-sec_paper"></span>
                 <h2>8.27<span class="c-sec_week">sun</span></h2>
@@ -355,30 +364,13 @@
                 </ul>
             </section>
 
-            <section class="c-sec" id="links">
-                <h2>8/26<span class="c-sec_week">sat</span></h2>
-                <ul class="c-tl">
-                    <li class="c-event_wrap">
-                        <div class="c-event">
-                            <div class="c-event_ttl">
-                                <span class="c-event_time">3:30</span>
-                                <span class="c-event_txt">起床</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="c-event_wrap">
-                        <div class="c-event">
-                            <div class="c-event_ttl">
-                                <span class="c-event_time">4:30</span>
-                                <span class="c-event_txt">ロープウェイ近辺 着</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-
         </div>
     </main>
+
+
+    <footer class="footer">
+        © n.hata 🍪
+    </footer>
 
 <script>
     $(function(){
@@ -390,8 +382,7 @@
 
         var sec25pos = $('#25fri').offset().top,
             sec26pos = $('#26sat').offset().top,
-            sec27pos = $('#27sun').offset().top,
-            secLinkPos = $('#links').offset().top;
+            sec27pos = $('#27sun').offset().top;
             
         $(window).on('scroll', function(){
             var menuHight = $menu.innerHeight(),
@@ -400,19 +391,19 @@
                 
             if( sclTopPos > menuTopPos ){
                 $menu.addClass('is-on');
-                $('.toc-25, .toc-26, .toc-27, .toc-links').removeClass('is-on');
+                $('.toc-25, .toc-26, .toc-27').removeClass('is-on');
             } else {
                 $menu.removeClass('is-on');
             }
             if( sclTopPos > sec25pos && sclTopPos < sec26pos ){
                 $('.toc-25').addClass('is-on');
-                $('.toc-26, .toc-27, .toc-links').removeClass('is-on');
+                $('.toc-26, .toc-27').removeClass('is-on');
             } else if (sclTopPos > sec26pos && sclTopPos < sec27pos ){
                 $('.toc-26').addClass('is-on');
-                $('.toc-25, .toc-27, .toc-links').removeClass('is-on');
-            } else if (sclTopPos > sec27pos && sclTopPos < secLinkPos ){
+                $('.toc-25, .toc-27').removeClass('is-on');
+            } else if (sclTopPos > sec27pos ){
                 $('.toc-27').addClass('is-on');
-                $('.toc-25, .toc-26, .toc-links').removeClass('is-on');
+                $('.toc-25, .toc-26').removeClass('is-on');
             }
 
         });
@@ -420,19 +411,15 @@
 
         $('.toc-25 a').on('click', function(){
             $('.toc-25').addClass('is-on');
-            $('.toc-26, .toc-27, .toc-links').removeClass('is-on');
+            $('.toc-26, .toc-27').removeClass('is-on');
         })
         $('.toc-26').on('click', function(){
             $(this).addClass('is-on');
-            $('.toc-25, .toc-27, .toc-links').removeClass('is-on');
+            $('.toc-25, .toc-27').removeClass('is-on');
         })
         $('.toc-27').on('click', function(){
             $(this).addClass('is-on');
-            $('.toc-25, .toc-26, .toc-links').removeClass('is-on');
-        })
-        $('.toc-links').on('click', function(){
-            $(this).addClass('is-on');
-            $('.toc-25, .toc-26, .toc-27').removeClass('is-on');
+            $('.toc-25, .toc-26').removeClass('is-on');
         })
 
         $('.toc a[href^="#"]').click(function(){
