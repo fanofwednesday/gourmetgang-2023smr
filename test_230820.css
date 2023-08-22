@@ -277,15 +277,15 @@ h1 {
     position: relative;
 }
 
-.c-sec:nth-child(n) {
+.c-sec.c-sec_25 {
     background: #5CD6CD;
 }
 
-.c-sec:nth-child(2n) {
+.c-sec.c-sec_26 {
     background: #A4E076;
 }
 
-.c-sec:nth-child(3n) {
+.c-sec.c-sec_27 {
     background: #F6E968;
 }
 
