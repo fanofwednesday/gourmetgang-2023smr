@@ -27,6 +27,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   background: #f7f7f7;
+  touch-action: manipulation;
 }
 
 body {
@@ -36,7 +37,6 @@ body {
   -webkit-box-direction: normal;
   flex-direction: column;
   margin: 0;
-  /* background-color: #f7f7f7; */
   color: #333;
   font-family: 'Roboto', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5;
